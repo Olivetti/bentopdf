@@ -32,7 +32,7 @@ env:
 jobs:
   # Single deploy job since we're just deploying
   deploy:
-    if: github.repository == 'Olivetti/bentopdf'
+    # if: github.repository == 'Olivetti/bentopdf' # ki
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -65,6 +65,7 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           artifact_name: github-pages-deployment
+
 
 
 
